@@ -17,6 +17,7 @@
 | **5.5** | **Optional: Delegation via GitHub CLI** | Make sure the GitHub CLI is installed. Delegate the task via the command line: **`gh issue create --title "@copilot Request: ...your Task..." --assignee @copilot`** |
 | **5.6** | **Challenge: Design Your Own Agent** | Design and create a new custom agent profile: **`.github/agents/YourAgentName.md`**. Delegate a new task to this Agent while you can focus on the next feature development. |
 | **5.7** | **Optional: Run Agent Locally** | **Chat:** Create a simple prompt to assign a task to any of your defined agents. Click the cloud icon next to the send button and select the GitHub Copilot CLI Agent.|
+| **5.8** | **External Resources** | Review community collections: **Awesome GitHub Copilot** and **GHCP Tool Library (UBS)** to find example agents, instructions, and MCP servers. |
 ---
 
 ### 🧠 Lesson Learned: Agentic Autonomy and Delegation
@@ -30,7 +31,8 @@ Delegating tasks to the autonomous Coding Agent transforms technical debt into a
 
 ### 💡 References & Further Reading
 
-* [VS Code: Custom Agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)  
-* [About Coding Agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent)  
-* [Create and Configure Custom Agents](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents)  
+* [VS Code: Custom Agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
+* [About Coding Agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent)
+* [Create and Configure Custom Agents](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents)
 * [Delegate from Copilot Chat (VS Code)](https://code.visualstudio.com/docs/copilot/copilot-coding-agent#_method-2-delegate-from-chat)
+* [Awesome GitHub Copilot](https://github.com/github/awesome-copilot/) — Community collection of agents, instructions, workflows, and plugins.

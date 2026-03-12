@@ -1,4 +1,4 @@
-## 🎯 Module VI: Vibe Coding — The Integrated Exploration Challenge
+## 🎯 Module VII: Vibe Coding — The Integrated Exploration Challenge
 
 ### 📚 Goal: Implement a functional prototype feature using your AI Coding Assistants to accelerate the entire development cycle.
 ---
