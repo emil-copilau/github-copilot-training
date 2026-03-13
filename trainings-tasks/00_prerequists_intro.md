@@ -16,7 +16,8 @@ To ensure a smooth session, please ensure the following items are verified befor
 -  **GitHub Copilot License**:
    -  **Use the 30-day free trial** — [Sign up for the 30-day free trial for GitHub Copilot Pro](https://github.com/github-copilot/pro)
    -  **Already used the trial?** — Contact us so we can find a solution.
-- **Visual Studio Code**: Recommended to use latest stable VS Code.
+- **Visual Studio Code**: Version **1.111 or newer** is required.
+- **GitHub Copilot Chat**: Version **0.39.0 or newer** is required for subagent features.
 - **Required Extensions**: Install the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Pull Requests & Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extensions in VS Code.
 -  **`uv` Package Manager**: The `uv` utility is required for fast environment and dependency management: [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
 - **Code Base**: Fork the [course repository](https://github.com/YvFrey/github-copilot-training.git) to your own GitHub account. Clone **your project** locally. This setup ensures you have all necessary permissions in Github when running your custom agents.
@@ -28,8 +29,8 @@ Due to the rapid pace of AI feature development, specific Copilot functionality 
 * **Challenge the Ask:** Always feel free to move beyond the explicit ask if you discover a newly released feature or a better, more efficient workflow.
 
 This training was developed on the following versions:
-* **VS Code Version:** 1.106.3
-* **GitHub Copilot Extension Version:** github.copilot@1.388.0, github.copilot-chat@0.33.3
+* **VS Code Version:** 1.111
+* **GitHub Copilot Extension Version:** github.copilot@1.388.0, github.copilot-chat@0.39.0
 * **Python Environment Manager (uv):** 0.8.10
 
 ---
