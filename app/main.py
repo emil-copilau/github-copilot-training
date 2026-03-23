@@ -2,7 +2,7 @@ from typing import Dict
 import asyncio
 from enum import Enum
 from typing import List
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 class TaskStatus(str, Enum):
@@ -44,7 +44,7 @@ async def generate_productivity_report() -> ProductivityReport:
     tasks = await fetch_all_tasks()
     
     total_tasks = len(tasks)
-    completed_tasks = sum(1 for task in tasks if task.status == TaskStatus.PENDING)
+    completed_tasks = sum(1 for task in tasks if task.status == TaskStatus.COMPLETE)
     
     total_hours_spent = sum(task.hours_spent for task in tasks)
     completion_rate = round(completed_tasks / total_tasks, 2) if total_tasks > 0 else 0.0
@@ -71,6 +71,15 @@ async def get_all_tasks():
     return await fetch_all_tasks()
 
 
+@app.get("/task/{task_id}/status")
+async def get_task_status(task_id: int) -> dict[str, str | int]:
+    task = MOCK_TASKS.get(task_id)
+    if task is None:
+        raise HTTPException(status_code=404, detail=f"Task {task_id} not found")
+
+    return {"task_id": task_id, "status": task.status}
+
+
 @app.get("/report", response_model=ProductivityReport)
 async def get_productivity_report():
     """Returns the calculated productivity report."""
@@ -78,7 +87,8 @@ async def get_productivity_report():
 
 
 @app.post("/log_task")
-async def log_task(task: DeveloperTask):
+async def log_task(task: DeveloperTask) -> str:
+    """Logs a task, assigns a new task_id on the server, and stores it in memory."""
     new_id = max(MOCK_TASKS.keys()) + 1 if MOCK_TASKS else 1
     task.task_id = new_id
     MOCK_TASKS[new_id] = task
